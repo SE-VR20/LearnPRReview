@@ -1,0 +1,62 @@
+@page
+@model PRReviewProject.Pages.Student.IndexModel
+@{
+    ViewData["Title"] = "Student Info";
+}
+
+<div class="container">
+    <h1 class="display-4">Student Information</h1>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Student Details</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Name:</th>
+                                <td>@Model.StudentName</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Student ID:</th>
+                                <td>@Model.StudentId</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email:</th>
+                                <td>@Model.Email</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Major:</th>
+                                <td>@Model.Major</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Year:</th>
+                                <td>@Model.Year</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">GPA:</th>
+                                <td>@Model.GPA.ToString("F2")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Quick Stats</h4>
+                </div>
+                <div class="card-body text-center">
+                    <p><strong>Academic Status:</strong></p>
+                    <span class="badge badge-@(Model.GPA >= 3.5 ? "success" : Model.GPA >= 2.0 ? "warning" : "danger") badge-lg">
+                        @(Model.GPA >= 3.5 ? "Excellent" : Model.GPA >= 2.0 ? "Good Standing" : "Needs Improvement")
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

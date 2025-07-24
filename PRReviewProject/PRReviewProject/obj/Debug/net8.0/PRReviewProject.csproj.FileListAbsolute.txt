@@ -1,0 +1,8 @@
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.AssemblyInfoInputs.cache
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.AssemblyInfo.cs
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.csproj.CoreCompileInputs.cache
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.MvcApplicationPartsAssemblyInfo.cache
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.RazorAssemblyInfo.cache
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.RazorAssemblyInfo.cs
+/home/runner/work/LearnPRReview/LearnPRReview/PRReviewProject/PRReviewProject/obj/Debug/net8.0/PRReviewProject.sourcelink.json
