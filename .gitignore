@@ -1,0 +1,54 @@
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# SQLite database files (for development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+node_modules/
+
+# Web workbench (sass)
+.sass-cache/
+
+# MacOS
+.DS_Store
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/

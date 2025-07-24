@@ -1,0 +1,77 @@
+@page
+@model PRReviewProject.Pages.Students.AddModel
+@{
+    ViewData["Title"] = "Add Student";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mb-0">Add New Student</h2>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.Message))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @Model.Message
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.FirstName" class="form-label"></label>
+                                <input asp-for="Student.FirstName" class="form-control" placeholder="Enter first name" />
+                                <span asp-validation-for="Student.FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.LastName" class="form-label"></label>
+                                <input asp-for="Student.LastName" class="form-control" placeholder="Enter last name" />
+                                <span asp-validation-for="Student.LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.Email" class="form-label"></label>
+                                <input asp-for="Student.Email" class="form-control" placeholder="Enter email address" />
+                                <span asp-validation-for="Student.Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.Age" class="form-label"></label>
+                                <input asp-for="Student.Age" class="form-control" type="number" min="16" max="65" placeholder="Enter age" />
+                                <span asp-validation-for="Student.Age" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.Course" class="form-label"></label>
+                                <input asp-for="Student.Course" class="form-control" placeholder="Enter course/major (optional)" />
+                                <span asp-validation-for="Student.Course" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Student.PhoneNumber" class="form-label">Phone Number</label>
+                                <input asp-for="Student.PhoneNumber" class="form-control" placeholder="Enter phone number (optional)" />
+                                <span asp-validation-for="Student.PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-secondary me-md-2" type="button" onclick="window.location.href='@Url.Page("/Index")'">Cancel</button>
+                            <button class="btn btn-primary" type="submit">Add Student</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
