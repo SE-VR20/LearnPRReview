@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using PRReviewProject.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add Entity Framework
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=staff.db"));
 
 var app = builder.Build();
 
